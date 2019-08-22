@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(70, 70, 70);
+}
+
+.header{
+    width: 400px;
+    height: 75px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    border: solid 1px black;
+}
+.quick-contact {
+    width: 400px;
+    height: 75px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border: solid 1px black;
+}
+.star {
+    margin-left: 25%;
+    margin-top: 25%;
+
+    animation-name: moveb;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes moveb{
+    from{
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+    50%{
+        -webkit-transform: scale3d(1.5,1.5,1.5);
+        transform: scale3d(1.5,1.5,1.5);
+    }
+    to {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+
+    border: solid 1px black;
+}

@@ -51,14 +51,7 @@ body{
     top: 0;   
     
 }
-ul{
-    list-style: none;
-    float: right;
-    
-}
-li{
-    padding: 5px;
-}
+
 .nav{
     position: absolute;
     width: 100%;
@@ -128,4 +121,25 @@ li{
 .sec {
     height: 200px;
     border-right: solid 2px black;    
+}
+.center{
+    text-align: center;
+    width: 50px;
+    margin: auto;
+    padding: 10px;
+}
+.container{
+    width: 80%;
+}
+ul{
+    list-style: none;
+    
+        
+}
+li{
+    padding: 5px;
+    
+}
+.perf{
+    height: 200px;
 }

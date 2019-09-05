@@ -31,6 +31,18 @@ body{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+
+.hacky{
+    visibility: hidden;
+    position: absolute;
+    top: 400px;
+}
+.hacky2{
+    visibility: hidden;
+    position: absolute;
+    top: 1000px;
+}
+
 .header{
     width: 100%;
     height: 200px;
@@ -39,10 +51,7 @@ body{
     border: solid 2px black;
     z-index: 2;
     background: #eee;
-    
 
-}
-.main{
     
 }
 .quick-contact{
@@ -80,7 +89,7 @@ body{
 }
 .section-image{
     
-    padding-top:200px;
+    
     height: 600px;
     background-image: url("/images/sub.png");
     background-repeat: no-repeat;
@@ -94,16 +103,10 @@ body{
     text-align: center;
     height: 400px;
 }
-.section-services{
-    height: 600px;
-}
-.section-contact{
-    height: 600px;
-}
-.footer{
-    height: 50px;
-    position: relative;
-}
+
+
+
+
 .circle {
     width: 150px;
     height: 150px;
@@ -140,6 +143,107 @@ li{
     padding: 5px;
     
 }
-.perf{
-    height: 200px;
+
+.section-services{
+    height: 600px;
+    background-image: url("/images/un-services.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.services{
+    
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto 0;
+}
+.general-1{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(238, 238, 238, 1);
+    margin-right: 20px;
+    text-align: end;
+}
+.general-2{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(238, 238, 238, 1);
+    position: absolute;
+    left: 20px;
+    top: 375px;
+}
+.performance{
+    font-size: 20px;
+    font-weight: bold;
+    height: 300px;
+    width: 400px;
+    background: rgba(238, 238, 238, .7);
+    float: left;
+    top: 50px;
+    right: 0;        
+}
+.performance p {
+    margin-left: 20px;
+}
+
+.section-contact{
+    height: 600px;
+}
+.contact-form{
+    height: 500px;
+    width: 40%;
+    margin-left: 9%;
+    margin-top: 50px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+}
+input[type=text], select{
+    width: 90%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+}
+input[type=submit] {
+    width: 20%;
+    color: rgb(238, 238, 238);
+    background: rgb(168, 0, 0);
+    padding: 14px 20px;
+    margin-left: 40%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+input[type=submit]:hover {
+    background: rgb(134, 0, 0);
+}
+#message{
+    width: 90%;
+    height: 160px;
+    margin: 20px;
+    display: inline-block;
+
+    resize: none;
+}
+.contact-deets{
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    height: 500px;
+    top: 50px;
+    right: 9%;
+    width: 40%;
+}
+.footer{
+    height: 30px;
+    position: relative;
+    background: #333;
 }

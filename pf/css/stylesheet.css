@@ -5,19 +5,31 @@
 body{
     margin: 0;
     padding: 0;
-    background: #eee;
+    background: rgb(238, 238, 238);;
+    font-family: coolvetica;
+    font-size: 20px;
+}
+@font-face{
+    font-family: "coolvetica";
+    src:url('/fonts/coolvetica.ttf') format('truetype');
+}
+@font-face{
+    font-family: "bison";
+    src:url('/fonts/Bison-Bold(PersonalUse).ttf') format('truetype');    
+}
+.title{
+    font-family: bison;
 }
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
-
 [class*="col-"] {
     float: left;
     padding: 15px;
-}
-  
+    
+}  
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -30,19 +42,24 @@ body{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-
-
-.hacky{
+.anchor-about{
     visibility: hidden;
     position: absolute;
     top: 400px;
 }
-.hacky2{
+.anchor-services{
     visibility: hidden;
     position: absolute;
     top: 1000px;
 }
-
+/* HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER | HEADER |  */
+.main{
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    font-size: 120px;
+    letter-spacing: 4px;
+}
 .header{
     width: 100%;
     height: 200px;
@@ -50,15 +67,20 @@ body{
     top:0;
     border: solid 2px black;
     z-index: 2;
-    background: #eee;
-
+    background: rgb(238, 238, 238);    
+}
+.header-bg{
+    fill: rgb(168, 0, 0);    
     
 }
 .quick-contact{
     position: absolute;
     right: 0;
-    top: 0;   
-    
+    top: 0;    
+}
+.quick-contact li{
+    display:inline;
+    padding: 20px;
 }
 
 .nav{
@@ -76,43 +98,70 @@ body{
     text-align: center;
     /* border-right: solid 1px #000; */
 }
-.nav button {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding-left: 20px;
-    text-align: center;
+.nav a:hover{
+    color:  rgb(168, 0, 0);
+    filter: drop-shadow(0 5px 10px #000);
+    
 }
 .section {
     width: 100%;
     position: relative;
     border: solid 1px #000;
 }
-.section-image{
-    
-    
+.section-image{    
     height: 600px;
     background-image: url("/images/sub.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;    
 }
+/* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
 .section-owner{
     height: 200px
 }
 .section-about{
     text-align: center;
     height: 400px;
+    font-family: coolvetica;
+    font-size: 20px;
+}
+.section-about p{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-button{
+    background-color: rgb(168, 0, 0);
+    font-family: coolvetica;
+    width: 200px;
+    
+    
+    padding: 14px 20px;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.contact-button a{
+    color: rgb(238, 238, 238);
+    text-decoration: none;
+    font-size: 20px;
+    
 }
 
 
-
+/* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
 
 .circle {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
     background: black;
+    background-image: url('/images/un-face.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
-    margin: auto;
+    margin: -10px auto;
 }
 .owner-img{
     background-image: url("/images/un-trophies.jpg");
@@ -135,89 +184,74 @@ body{
     width: 80%;
 }
 ul{
-    list-style: none;
-    
-        
+    list-style: none;        
 }
 li{
     padding: 5px;
     
 }
-
+/* SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES */
 .section-services{
     height: 600px;
     background-image: url("/images/un-services.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;    
 }
-.services{
-    
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto 0;
-}
-.general-1{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(238, 238, 238, 1);
-    margin-right: 20px;
-    text-align: end;
-}
-.general-2{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(238, 238, 238, 1);
-    position: absolute;
-    left: 20px;
-    top: 375px;
-}
-.performance{
-    font-size: 20px;
+.box{
+    font-family: bison;
+    font-size: 25px;
     font-weight: bold;
     height: 300px;
-    width: 400px;
+    width:20%;
     background: rgba(238, 238, 238, .7);
     float: left;
-    top: 50px;
-    right: 0;        
+    margin-top: 150px;
+    margin-left: 10%;
+    border: 1px solid #333;
+    border-radius: 10px
 }
-.performance p {
+.box p{
     margin-left: 20px;
+    
 }
 
 .section-contact{
     height: 600px;
 }
 .contact-form{
+    
     height: 500px;
     width: 40%;
     margin-left: 9%;
     margin-top: 50px;
     padding: 10px;
     background: white;
-    border-radius: 5px;
+    border: 1px solid rgb(200, 160, 160);
+    border-radius: 10px;
 }
 input[type=text], select{
+    font-family: coolvetica;
     width: 90%;
     max-width: 350px;
     padding: 10px;
     margin: 20px;
     display: inline-block;
-    border: 1px solid #eee;
+    border: 1px solid #333;
     border-radius: 5px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     
 }
 input[type=submit] {
+    font-family: coolvetica;
     width: 20%;
     color: rgb(238, 238, 238);
     background: rgb(168, 0, 0);
     padding: 14px 20px;
     margin-left: 40%;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     
 }
@@ -226,24 +260,34 @@ input[type=submit]:hover {
 }
 #message{
     width: 90%;
-    height: 160px;
+    height: 220px;
     margin: 20px;
     display: inline-block;
-
+    border: 1px solid #333;
+    border-radius: 5px;
     resize: none;
+    font-family: coolvetica;
 }
-.contact-deets{
+.map{
     padding: 10px;
     background: white;
-    border-radius: 5px;
+    border: 1px solid rgb(200, 160, 160);
+    border-radius: 10px;
     position: absolute;
     height: 500px;
     top: 50px;
     right: 9%;
     width: 40%;
+    background-image: url('/images/map.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .footer{
-    height: 30px;
+    height: 20px;
     position: relative;
+    color: #eee;
     background: #333;
+    font-size: 12px;
+    text-align: end;
 }

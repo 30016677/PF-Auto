@@ -11,15 +11,16 @@ body{
 }
 @font-face{
     font-family: "coolvetica";
-    src:url('/fonts/coolvetica.ttf') format('truetype');
+    src:url('fonts/coolvetica.ttf') format('truetype');
 }
 @font-face{
     font-family: "bison";
-    src:url('/fonts/Bison-Bold(PersonalUse).ttf') format('truetype');    
+    src:url('fonts/Bison-Bold(PersonalUse).ttf') format('truetype');    
 }
 .title{
     font-family: bison;
 }
+/* GRID */
 .row::after {
     content: "";
     clear: both;
@@ -27,8 +28,7 @@ body{
 }
 [class*="col-"] {
     float: left;
-    padding: 15px;
-    
+    padding: 15px;    
 }  
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -42,6 +42,7 @@ body{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+/* ANCHORS */
 .anchor-about{
     visibility: hidden;
     position: absolute;
@@ -70,8 +71,7 @@ body{
     background: rgb(238, 238, 238);    
 }
 .header-bg{
-    fill: rgb(168, 0, 0);    
-    
+    fill: rgb(168, 0, 0);
 }
 .quick-contact{
     position: absolute;
@@ -89,19 +89,16 @@ body{
     height: 50px;
     right: 0;
     bottom: 0;
-    /* border: solid 1px #000; */
 }
 .nav a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     padding-left: 20px;
     text-align: center;
-    /* border-right: solid 1px #000; */
 }
 .nav a:hover{
-    color:  rgb(168, 0, 0);
+    color: rgb(168, 0, 0);
     filter: drop-shadow(0 5px 10px #000);
-    
 }
 .section {
     width: 100%;
@@ -110,7 +107,7 @@ body{
 }
 .section-image{    
     height: 600px;
-    background-image: url("/images/sub.png");
+    background-image: url("images/sub.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;    
@@ -133,10 +130,7 @@ body{
     background-color: rgb(168, 0, 0);
     font-family: coolvetica;
     width: 200px;
-    
-    
     padding: 14px 20px;
-    
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -146,17 +140,13 @@ body{
     color: rgb(238, 238, 238);
     text-decoration: none;
     font-size: 20px;
-    
 }
-
-
 /* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
-
 .circle {
     width: 190px;
     height: 190px;
     background: black;
-    background-image: url('/images/un-face.jpg');
+    background-image: url('images/un-face.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -164,15 +154,13 @@ body{
     margin: -10px auto;
 }
 .owner-img{
-    background-image: url("/images/un-trophies.jpg");
+    background-image: url("images/un-trophies.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 .sec {
     height: 200px;
-    border-right: solid 2px black;    
 }
 .center{
     text-align: center;
@@ -187,13 +175,12 @@ ul{
     list-style: none;        
 }
 li{
-    padding: 5px;
-    
+    padding: 5px;    
 }
 /* SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES */
 .section-services{
     height: 600px;
-    background-image: url("/images/un-services.jpg");
+    background-image: url('images/un-services.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;    
@@ -212,15 +199,12 @@ li{
     border-radius: 10px
 }
 .box p{
-    margin-left: 20px;
-    
+    margin-left: 20px;    
 }
-
 .section-contact{
     height: 600px;
 }
 .contact-form{
-    
     height: 500px;
     width: 40%;
     margin-left: 9%;
@@ -241,7 +225,6 @@ input[type=text], select{
     border-radius: 5px;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    
 }
 input[type=submit] {
     font-family: coolvetica;
@@ -253,7 +236,6 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
 }
 input[type=submit]:hover {
     background: rgb(134, 0, 0);
@@ -278,7 +260,7 @@ input[type=submit]:hover {
     top: 50px;
     right: 9%;
     width: 40%;
-    background-image: url('/images/map.png');
+    background-image: url('images/map.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -80,14 +80,20 @@ body{
 .quick-contact{
     position: absolute;
     right: 0;
-    top: 0;    
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;    
 }
 .quick-contact li{
     display:inline;
-    padding: 20px;
+    padding-left: 20px;
+    justify-content: flex-end;
 }
 
 .nav{
+    display: flex;
+    justify-content: space-evenly;
+
     position: absolute;
     width: 100%;
     height: 50px;
@@ -104,6 +110,9 @@ body{
     color: rgb(168, 0, 0);
     filter: drop-shadow(0 5px 10px #000);
 }
+
+
+
 .section {
     width: 100%;
     position: relative;
@@ -123,18 +132,92 @@ body{
         left: 0px;
 
     }
-    .quick-contact{
+    .quick-contact li{
         font-size: 15px;
+        padding-left: 5px;
     }
+   
+    
+}
+ul{
+    list-style: none;        
+}
+li{
+    padding: 5px;    
 }
 
-/* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
-.section-owner{
-    height: 200px
+@media only screen and (max-width: 468px){
+    .main{
+        font-size: 35px;
+        position: absolute;
+        top: 100px;
+        margin-left: auto;
+    }
+    .header{
+        
+    }
+    .nav{
+        display:none;
+        
+    }
+    
+    
+    .section-about, .section-owner{
+        font-size: 16px !important;
+    }
+    
 }
+
+/* OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER  |  OWNER */
+.section-owner{
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.owner-image {
+    width: 190px;
+    height: 190px;
+    margin: 5px 0 0 5px;
+    background: white;
+    background-image: url('images/un-face.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    /* margin: -10px auto; */
+    
+}
+.owner-info{
+    width:350px;
+    height:200px;
+    flex-grow:1;
+    margin: 0 10px;
+    
+}
+.owner-img{
+    height:200px;
+    width:356px;
+    background-image: url("images/un-trophies.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow:1;
+}
+
+/* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
+
+.center{
+    text-align: center;
+    width: 50px;
+    margin: auto;
+    padding: 10px;
+}
+
 .section-about{
     text-align: center;
-    height: 400px;
+    min-height: 400px;
     font-family: coolvetica;
     font-size: 20px;
 }
@@ -157,73 +240,55 @@ body{
     text-decoration: none;
     font-size: 20px;
 }
-/* ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT  |  ABOUT */
-.circle {
-    width: 190px;
-    height: 190px;
-    background: black;
-    background-image: url('images/un-face.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    margin: -10px auto;
-}
-.owner-img{
-    background-image: url("images/un-trophies.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.sec {
-    height: 200px;
-}
-.center{
-    text-align: center;
-    width: 50px;
-    margin: auto;
-    padding: 10px;
-}
-.container{
-    width: 80%;
-}
-ul{
-    list-style: none;        
-}
-li{
-    padding: 5px;    
-}
+
 /* SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES  |  SERVICES */
 .section-services{
-    height: 600px;
+    min-height: 600px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     background-image: url('images/un-services.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;    
+    background-size: cover;
 }
 .box{
     font-family: bison;
     font-size: 25px;
     font-weight: bold;
     height: 300px;
-    width:20%;
+    width: 300px;
+    
     background: rgba(238, 238, 238, .7);
-    float: left;
-    margin-top: 150px;
-    margin-left: 10%;
+    
+    margin: auto 0;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    
     border: 1px solid #333;
     border-radius: 10px
 }
 .box p{
     margin-left: 20px;    
 }
+
+@media only screen and (max-width: 919px) {
+    .box {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+  }
+  /* CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |   */
 .section-contact{
-    height: 600px;
+    min-height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
 }
 .contact-form{
     height: 500px;
-    width: 40%;
-    margin-left: 9%;
+    width: 500px;
     margin-top: 50px;
     padding: 10px;
     background: white;
@@ -271,11 +336,10 @@ input[type=submit]:hover {
     background: white;
     border: 1px solid rgb(200, 160, 160);
     border-radius: 10px;
-    position: absolute;
     height: 500px;
-    top: 50px;
-    right: 9%;
-    width: 40%;
+    width: 500px;
+    margin: 50px 0;
+
     background-image: url('images/map.png');
     background-repeat: no-repeat;
     background-position: center;

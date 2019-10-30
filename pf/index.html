@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheet.css">    
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>PF Automotive</title>
   </head>
 <body>
 
@@ -18,12 +19,12 @@
   
   <div class="main title">PF AUTOMOTIVE</div>
   
-  <div class="quick-contact">    
+  <ul class="quick-contact">    
     <li>david@pfauto.co.nz</li>
     <li>07 578 0479</li>
     <li>Mon-Fri 7.30am-5.30pm</li> 
     <li>95 Birch Ave</li>    
-  </div>
+  </ul>
 
   
   <div class="nav">
@@ -93,11 +94,18 @@
 
 <div class="section section-contact" id="contact">
     
-  <form class="contact-form" name="contact-form" onsubmit="return ValidateForm()">
-    <input type="text" name="name" placeholder="Name"><br>
-    <input type="text" name="email" placeholder="Email"><br>
-    <textarea id="message" name="message" placeholder="Messsage"></textarea><br>
-    <input type="submit" value="Send">
+    <!-- onsubmit="return ValidateForm()" -->
+
+  <form class="contact-form" name="contact-form" >
+    <!-- Error message to display when validation returns false -->
+    <span id="error"></span> 
+    <input type="text" name="name" placeholder="Name">    
+    <br>
+    <input type="text" name="email" placeholder="Email">
+    <br>
+    <textarea id="message" name="message" placeholder="Messsage"></textarea>
+    <br>
+    <input type="button" value="Send" onclick="ValidateForm()">
   </form>
   
   <div class="map"> 
@@ -111,38 +119,80 @@
 
 </div>
 
+<div id="modal" class="modal">
+  
+  <div id="modal-content">
+    <span id="close">Close</span>
+    <br>
+    <p>Your name is:</p>
+    <p id="name-output"></p>
+    <p>Your email is:</p>
+    <p id="email-output"></p>
+    <p>And your message was:</p>
+    <p id="message-output"></p>
+    
+  
+  </div>
+  
+</div>
+
 <div class="footer">
   Created by Kris Boyte
 </div>
 
 </body>
 <script>
+
 function ValidateForm(){
 
   var name = document.forms["contact-form"]["name"];
   var email = document.forms["contact-form"]["email"];
   var message = document.forms["contact-form"]["message"];
+  var error = document.getElementById("error");
+  var modal = document.getElementById("modal");
+  var close = document.getElementById("close");
+  var test = true;
+  var nameOutput = document.getElementById("name-output");
+  var emailOutput = document.getElementById("email-output");
+  var messageOutput = document.getElementById("message-output");  
 
   if (name.value == ""){
-    window.alert("Please enter your name");
+    error.innerHTML = "Please enter your name";
     name.focus();
-    return false;
+    test = false;
   }
 
   if (email.value == "" || email.value.indexOf("@", 0) < 0){
-    window.alert("Please enter a valid email");
+    error.innerHTML = "Please enter a valid email";
     email.focus();
-    return false;
-  }
-  
+    test = false;
+  }  
 
   if (message.value == ""){
-    window.alert("Please enter a message to send to PF Automotive");
+    error.innerHTML = "Please enter a message to send to PF Automotive";
     message.focus();
-    return false;
+    test = false;
   }
-  
+
+  if(test == true){
+    modal.style.display = "block";
+    nameOutput.innerHTML = name.value;
+    emailOutput.innerHTML = email.value;
+    messageOutput.innerHTML = message.value;
+  }
+
+close.onclick = function(){
+  modal.style.display = "none";
 }
+    
+  
+
+  
+  
+    
+}
+
+
 </script>
 
 </html>

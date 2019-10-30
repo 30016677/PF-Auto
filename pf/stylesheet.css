@@ -42,6 +42,7 @@ body{
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
 /* ANCHORS */
 .anchor-about{
     visibility: hidden;
@@ -58,7 +59,6 @@ body{
     position: absolute;
     top: 0px;
     left: 50px;
-    /* float: left; */
     font-size: 120px;
     letter-spacing: 4px;
 }
@@ -72,28 +72,25 @@ body{
     background-image: url('images/header.png');
     background-repeat: no-repeat;
     background-position: left;
-
 }
-/* .header-bg{
-    fill: rgb(168, 0, 0);
-} */
 .quick-contact{
     position: absolute;
     right: 0;
     top: 0;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;   
 }
 .quick-contact li{
     display:inline;
     padding-left: 20px;
     justify-content: flex-end;
 }
-
 .nav{
     display: flex;
     justify-content: space-evenly;
-
     position: absolute;
     width: 100%;
     height: 50px;
@@ -110,9 +107,6 @@ body{
     color: rgb(168, 0, 0);
     filter: drop-shadow(0 5px 10px #000);
 }
-
-
-
 .section {
     width: 100%;
     position: relative;
@@ -125,6 +119,7 @@ body{
     background-position: center;
     background-attachment: fixed;    
 }
+/* Media queries for large mobile and small mobile */
 @media only screen and (max-width: 768px){
     .main{
         font-size: 80px;
@@ -136,16 +131,8 @@ body{
         font-size: 15px;
         padding-left: 5px;
     }
-   
-    
+       
 }
-ul{
-    list-style: none;        
-}
-li{
-    padding: 5px;    
-}
-
 @media only screen and (max-width: 468px){
     .main{
         font-size: 35px;
@@ -256,7 +243,7 @@ li{
     font-family: bison;
     font-size: 25px;
     font-weight: bold;
-    height: 300px;
+    min-height: 300px;
     width: 300px;
     
     background: rgba(238, 238, 238, .7);
@@ -271,13 +258,12 @@ li{
 .box p{
     margin-left: 20px;    
 }
-
 @media only screen and (max-width: 919px) {
     .box {
         margin-top: 25px;
         margin-bottom: 25px;
     }
-  }
+}
   /* CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |  CONTACT  |   */
 .section-contact{
     min-height: 600px;
@@ -307,7 +293,7 @@ input[type=text], select{
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-input[type=submit] {
+input[type=button] {
     font-family: coolvetica;
     width: 20%;
     color: rgb(238, 238, 238);
@@ -318,7 +304,7 @@ input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
-input[type=submit]:hover {
+input[type=button]:hover {
     background: rgb(134, 0, 0);
 }
 #message{
@@ -345,6 +331,49 @@ input[type=submit]:hover {
     background-position: center;
     background-size: cover;
 }
+
+#error{
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    margin-left: 20px;
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;     
+    background-color: rgba(0,0,0,0.4);
+    
+}
+#modal-content{
+    max-width: 500px;
+    min-height: 500px;
+    margin: auto;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(66, 66, 66, .7);
+}
+#close{
+    float: right;
+    color: red;
+    margin-right: 10px;
+}
+#close:hover{
+    cursor: pointer;
+}
+#modal-content > p{
+    margin-left: 10px;
+    margin-bottom: -5px;
+    word-wrap: break-word;
+}
+
 .footer{
     height: 20px;
     position: relative;
